@@ -10,7 +10,7 @@ public abstract class CreationAuditedEntityDto : EntityDto, ICreationAuditedObje
 }
 
 [Serializable]
-public abstract class CreationAuditedEntityDto<TPrimaryKey> : EntityDto<TPrimaryKey>, ICreationAuditedObject
+public abstract class CreationAuditedEntityDto<TKey> : EntityDto<TKey>, ICreationAuditedObject
 {
     public DateTime CreationTime { get; set; }
     public Guid? CreatorId { get; set; }

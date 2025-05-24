@@ -5,7 +5,6 @@ Fermion.Domain.Shared is a library that provides common abstractions, base class
 ## Features
 
 - Base entity classes
-- Audit logging support
 - DTO base classes
 - Controller conventions
 - API filters
@@ -107,10 +106,6 @@ Fermion.Domain.Shared is a library that provides common abstractions, base class
   - Response modification
   - Status code configuration
 
-#### Processing Filters
-- `ExcludeFromProcessingAggregateRootAttribute`: Attribute for excluding aggregate roots from processing
-- `ExcludeFromProcessingAuditLogAttribute`: Attribute for excluding entities from audit logging
-
 ## Usage
 
 ### Entity Implementation
@@ -167,10 +162,8 @@ services.AddControllers()
 
 ## Features
 
-- Domain-driven design support
 - Audit logging integration
 - Soft delete implementation
-- DTO mapping support
 - Controller conventions
 - API filtering
 - Type safety

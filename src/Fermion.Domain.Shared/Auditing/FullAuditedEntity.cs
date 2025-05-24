@@ -6,22 +6,22 @@ namespace Fermion.Domain.Shared.Auditing;
 [Serializable]
 public abstract class FullAuditedEntity : AuditedEntity, IFullAuditedObject
 {
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual bool IsDeleted { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual Guid? DeleterId { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual DateTime? DeletionTime { get; set; }
 }
 
 [Serializable]
 public abstract class FullAuditedEntity<TKey> : AuditedEntity<TKey>, IFullAuditedObject
 {
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual bool IsDeleted { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual Guid? DeleterId { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual DateTime? DeletionTime { get; set; }
 
     protected FullAuditedEntity()

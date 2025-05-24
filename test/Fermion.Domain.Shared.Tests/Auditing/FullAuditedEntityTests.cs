@@ -117,43 +117,6 @@ public class FullAuditedEntityTests
         Assert.NotNull(entity.ConcurrencyStamp);
     }
 
-    [Fact]
-    public void FullAuditedEntity_ShouldTrackChangesIncludingDeletionProperties()
-    {
-        // Arrange
-        var entity = new TestFullAuditedEntity
-        {
-            CreationTime = new DateTime(2023, 1, 1),
-            CreatorId = Guid.NewGuid(),
-            LastModificationTime = new DateTime(2023, 1, 2),
-            LastModifierId = Guid.NewGuid(),
-            IsDeleted = false,
-            DeleterId = null,
-            DeletionTime = null
-        };
-        entity.TrackChanges();
-
-        // Act
-        entity.IsDeleted = true;
-        entity.DeleterId = Guid.NewGuid();
-        entity.DeletionTime = new DateTime(2023, 1, 3);
-        var changes = entity.GetChanges();
-
-        // Assert
-        Assert.Contains("IsDeleted", changes.Keys);
-        Assert.Contains("DeleterId", changes.Keys);
-        Assert.Contains("DeletionTime", changes.Keys);
-
-        Assert.False((bool)changes["IsDeleted"].Original);
-        Assert.True((bool)changes["IsDeleted"].Current);
-
-        Assert.Null(changes["DeleterId"].Original);
-        Assert.NotNull(changes["DeleterId"].Current);
-
-        Assert.Null(changes["DeletionTime"].Original);
-        Assert.NotNull(changes["DeletionTime"].Current);
-    }
-
     // Test implementation classes
     private class TestFullAuditedEntity : FullAuditedEntity
     {

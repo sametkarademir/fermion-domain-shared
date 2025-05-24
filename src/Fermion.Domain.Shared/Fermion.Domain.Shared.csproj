@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>Fermion.Domain.Shared</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>Samet Karademir</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/sametkarademir/fermion-domain-shared</RepositoryUrl>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="readme.md">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.0" />
+    </ItemGroup>
+
+</Project>

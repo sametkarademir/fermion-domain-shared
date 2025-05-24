@@ -11,7 +11,7 @@ public abstract class FullAuditedEntityDto : AuditedEntityDto, IFullAuditedObjec
 }
 
 [Serializable]
-public abstract class FullAuditedEntityDto<TPrimaryKey> : AuditedEntityDto<TPrimaryKey>, IFullAuditedObject
+public abstract class FullAuditedEntityDto<TKey> : AuditedEntityDto<TKey>, IFullAuditedObject
 {
     public bool IsDeleted { get; set; }
     public Guid? DeleterId { get; set; }

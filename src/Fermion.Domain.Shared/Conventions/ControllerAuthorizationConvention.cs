@@ -5,6 +5,15 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Fermion.Domain.Shared.Conventions;
 
+/// <summary>
+/// This class is used to apply authorization policies to controllers.
+/// It implements the IControllerModelConvention interface.
+/// </summary>
+/// <param name="controllerType">The type of the controller to apply the convention to.</param>
+/// <param name="route">The route template to apply to the controller.</param>
+/// <param name="requireAuthentication">Whether authentication is required.</param>
+/// <param name="globalPolicy">The global authorization policy to apply.</param>
+/// <param name="allowedRoles">The list of allowed roles for the controller.</param>
 public class ControllerAuthorizationConvention(
     Type controllerType,
     string route,

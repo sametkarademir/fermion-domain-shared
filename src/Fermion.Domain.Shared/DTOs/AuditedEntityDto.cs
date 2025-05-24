@@ -10,7 +10,7 @@ public abstract class AuditedEntityDto : CreationAuditedEntityDto, IAuditedObjec
 }
 
 [Serializable]
-public abstract class AuditedEntityDto<TPrimaryKey> : CreationAuditedEntityDto<TPrimaryKey>, IAuditedObject
+public abstract class AuditedEntityDto<TKey> : CreationAuditedEntityDto<TKey>, IAuditedObject
 {
     public DateTime? LastModificationTime { get; set; }
     public Guid? LastModifierId { get; set; }

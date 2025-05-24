@@ -1,8 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0FAB2F9A-4F6D-48DE-BF9C-CFCD189CBD8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B9527314-A946-4312-8380-7F0D1EEBA4F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.Domain.Shared", "src\Fermion.Domain.Shared\Fermion.Domain.Shared.csproj", "{38A399C9-2255-4765-AB46-555D0988B441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.Domain.Shared.Tests", "test\Fermion.Domain.Shared.Tests\Fermion.Domain.Shared.Tests.csproj", "{98259D8A-ED49-4FEC-B6C9-9FE37BF3A521}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38A399C9-2255-4765-AB46-555D0988B441} = {0FAB2F9A-4F6D-48DE-BF9C-CFCD189CBD8C}
+		{98259D8A-ED49-4FEC-B6C9-9FE37BF3A521} = {B9527314-A946-4312-8380-7F0D1EEBA4F3}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38A399C9-2255-4765-AB46-555D0988B441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A399C9-2255-4765-AB46-555D0988B441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A399C9-2255-4765-AB46-555D0988B441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A399C9-2255-4765-AB46-555D0988B441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98259D8A-ED49-4FEC-B6C9-9FE37BF3A521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98259D8A-ED49-4FEC-B6C9-9FE37BF3A521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98259D8A-ED49-4FEC-B6C9-9FE37BF3A521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98259D8A-ED49-4FEC-B6C9-9FE37BF3A521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

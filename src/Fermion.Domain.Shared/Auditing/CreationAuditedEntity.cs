@@ -6,18 +6,18 @@ namespace Fermion.Domain.Shared.Auditing;
 [Serializable]
 public abstract class CreationAuditedEntity : Entity, ICreationAuditedObject
 {
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual DateTime CreationTime { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual Guid? CreatorId { get; set; }
 }
 
 [Serializable]
 public abstract class CreationAuditedEntity<TKey> : Entity<TKey>, ICreationAuditedObject
 {
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual DateTime CreationTime { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual Guid? CreatorId { get; set; }
 
     protected CreationAuditedEntity()

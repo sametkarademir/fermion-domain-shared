@@ -6,22 +6,22 @@ namespace Fermion.Domain.Shared.Auditing;
 [Serializable]
 public abstract class AuditedEntity : CreationAuditedEntity, IAuditedObject, IHasConcurrencyStamp
 {
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual DateTime? LastModificationTime { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual Guid? LastModifierId { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public string ConcurrencyStamp { get; set; } = Guid.NewGuid().ToString("N");
 }
 
 [Serializable]
 public abstract class AuditedEntity<TKey> : CreationAuditedEntity<TKey>, IAuditedObject, IHasConcurrencyStamp
 {
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual DateTime? LastModificationTime { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public virtual Guid? LastModifierId { get; set; }
-    [ExcludeFromProcessingAuditLog]
+    [ExcludeFromProcessing]
     public string ConcurrencyStamp { get; set; } = Guid.NewGuid().ToString("N");
 
     protected AuditedEntity()

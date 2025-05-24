@@ -7,7 +7,7 @@ namespace Fermion.Domain.Shared.Tests.Auditing;
 public class ExcludeFromProcessingAuditLogAttributeTests
 {
     [Fact]
-    public void AuditProperties_ShouldHaveExcludeFromProcessingAuditLogAttribute()
+    public void AuditProperties_ShouldHaveExcludeFromProcessingAttribute()
     {
         // Arrange & Act
         var baseEntityProperties = typeof(Entity<string>).GetProperty("Id");
@@ -30,26 +30,26 @@ public class ExcludeFromProcessingAuditLogAttributeTests
         };
 
         // Assert
-        Assert.NotNull(baseEntityProperties?.GetCustomAttribute<ExcludeFromProcessingAuditLogAttribute>());
+        Assert.NotNull(baseEntityProperties?.GetCustomAttribute<ExcludeFromProcessingAttribute>());
 
         foreach (var property in creationEntityProperties)
         {
-            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAuditLogAttribute>());
+            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAttribute>());
         }
 
         foreach (var property in auditedEntityProperties)
         {
-            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAuditLogAttribute>());
+            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAttribute>());
         }
 
         foreach (var property in fullAuditedEntityProperties)
         {
-            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAuditLogAttribute>());
+            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAttribute>());
         }
     }
 
     [Fact]
-    public void GenericAuditProperties_ShouldHaveExcludeFromProcessingAuditLogAttribute()
+    public void GenericAuditProperties_ShouldHaveExcludeFromProcessingAttribute()
     {
         // Arrange & Act
         var creationEntityProperties = new[]
@@ -73,17 +73,17 @@ public class ExcludeFromProcessingAuditLogAttributeTests
         // Assert
         foreach (var property in creationEntityProperties)
         {
-            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAuditLogAttribute>());
+            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAttribute>());
         }
 
         foreach (var property in auditedEntityProperties)
         {
-            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAuditLogAttribute>());
+            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAttribute>());
         }
 
         foreach (var property in fullAuditedEntityProperties)
         {
-            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAuditLogAttribute>());
+            Assert.NotNull(property?.GetCustomAttribute<ExcludeFromProcessingAttribute>());
         }
     }
 }
