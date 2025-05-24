@@ -1,0 +1,32 @@
+using Fermion.Domain.Shared.Abstractions;
+using Fermion.Domain.Shared.Filters;
+
+namespace Fermion.Domain.Shared.Auditing;
+
+[Serializable]
+public abstract class CreationAuditedEntity : Entity, ICreationAuditedObject
+{
+    [ExcludeFromProcessingAuditLog]
+    public virtual DateTime CreationTime { get; set; }
+    [ExcludeFromProcessingAuditLog]
+    public virtual Guid? CreatorId { get; set; }
+}
+
+[Serializable]
+public abstract class CreationAuditedEntity<TKey> : Entity<TKey>, ICreationAuditedObject
+{
+    [ExcludeFromProcessingAuditLog]
+    public virtual DateTime CreationTime { get; set; }
+    [ExcludeFromProcessingAuditLog]
+    public virtual Guid? CreatorId { get; set; }
+
+    protected CreationAuditedEntity()
+    {
+
+    }
+
+    protected CreationAuditedEntity(TKey id) : base(id)
+    {
+
+    }
+}
