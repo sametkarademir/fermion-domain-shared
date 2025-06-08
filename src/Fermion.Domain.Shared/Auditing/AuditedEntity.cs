@@ -26,7 +26,7 @@ public abstract class AuditedEntity : CreationAuditedEntity, IAuditedObject, IHa
     /// Gets or sets the concurrency stamp for optimistic concurrency control.
     /// </summary>
     [ExcludeFromProcessing]
-    public string ConcurrencyStamp { get; set; } = Guid.NewGuid().ToString("N");
+    public virtual string ConcurrencyStamp { get; set; }
 }
 
 /// <summary>
@@ -53,7 +53,7 @@ public abstract class AuditedEntity<TKey> : CreationAuditedEntity<TKey>, IAudite
     /// Gets or sets the concurrency stamp for optimistic concurrency control.
     /// </summary>
     [ExcludeFromProcessing]
-    public string ConcurrencyStamp { get; set; } = Guid.NewGuid().ToString("N");
+    public virtual string ConcurrencyStamp { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AuditedEntity{TKey}"/> class.
