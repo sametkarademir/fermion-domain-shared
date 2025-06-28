@@ -1,4 +1,4 @@
-using Fermion.Domain.Shared.Abstractions;
+using Fermion.Domain.Shared.Interfaces;
 using Fermion.Domain.Shared.Filters;
 
 namespace Fermion.Domain.Shared.Auditing;
@@ -26,7 +26,7 @@ public abstract class AuditedEntity : CreationAuditedEntity, IAuditedObject, IHa
     /// Gets or sets the concurrency stamp for optimistic concurrency control.
     /// </summary>
     [ExcludeFromProcessing]
-    public virtual string ConcurrencyStamp { get; set; }
+    public virtual string ConcurrencyStamp { get; set; } = string.Empty;
 }
 
 /// <summary>
@@ -53,7 +53,7 @@ public abstract class AuditedEntity<TKey> : CreationAuditedEntity<TKey>, IAudite
     /// Gets or sets the concurrency stamp for optimistic concurrency control.
     /// </summary>
     [ExcludeFromProcessing]
-    public virtual string ConcurrencyStamp { get; set; }
+    public virtual string ConcurrencyStamp { get; set; } = string.Empty;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AuditedEntity{TKey}"/> class.

@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for audited objects that track creation and modification information.
+/// Interfaces for audited objects that track creation and modification information.
 /// Combines creation and modification audit interfaces.
 /// </summary>
 public interface IAuditedObject :

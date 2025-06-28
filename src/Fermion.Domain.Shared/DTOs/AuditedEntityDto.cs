@@ -1,4 +1,4 @@
-using Fermion.Domain.Shared.Abstractions;
+using Fermion.Domain.Shared.Interfaces;
 
 namespace Fermion.Domain.Shared.DTOs;
 

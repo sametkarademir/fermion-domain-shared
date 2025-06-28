@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for objects that have a correlation identifier.
+/// Interfaces for objects that have a correlation identifier.
 /// Used for tracking related operations across the system.
 /// </summary>
 public interface IEntityCorrelationId

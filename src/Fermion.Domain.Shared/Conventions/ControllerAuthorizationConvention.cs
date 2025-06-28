@@ -29,7 +29,7 @@ public class ControllerAuthorizationConvention(
             return;
         }
 
-        if (!requireAuthentication && string.IsNullOrEmpty(globalPolicy) && allowedRoles == null)
+        if (!requireAuthentication)
         {
             return;
         }

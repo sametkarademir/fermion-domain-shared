@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for objects that track modification information.
+/// Interfaces for objects that track modification information.
 /// </summary>
 public interface IModificationAuditedObject : IHasModificationTime
 {

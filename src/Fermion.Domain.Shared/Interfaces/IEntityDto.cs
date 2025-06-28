@@ -1,4 +1,4 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
 /// Base interface for all entity data transfer objects.

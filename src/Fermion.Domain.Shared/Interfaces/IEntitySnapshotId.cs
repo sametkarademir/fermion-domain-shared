@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for objects that have a snapshot identifier.
+/// Interfaces for objects that have a snapshot identifier.
 /// Used for tracking entity state snapshots.
 /// </summary>
 public interface IEntitySnapshotId

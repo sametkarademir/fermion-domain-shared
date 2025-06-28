@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for objects that support soft deletion.
+/// Interfaces for objects that support soft deletion.
 /// </summary>
 public interface ISoftDelete
 {

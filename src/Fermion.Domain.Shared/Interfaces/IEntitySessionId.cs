@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for objects that have a session identifier.
+/// Interfaces for objects that have a session identifier.
 /// Used for tracking operations within a specific session.
 /// </summary>
 public interface IEntitySessionId

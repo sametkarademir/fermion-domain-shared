@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for objects that track their deletion time.
+/// Interfaces for objects that track their deletion time.
 /// </summary>
 public interface IHasDeletionTime : ISoftDelete
 {

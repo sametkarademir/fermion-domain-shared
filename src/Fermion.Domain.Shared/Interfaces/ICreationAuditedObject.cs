@@ -1,7 +1,7 @@
-namespace Fermion.Domain.Shared.Abstractions;
+namespace Fermion.Domain.Shared.Interfaces;
 
 /// <summary>
-/// Interface for objects that track creation information.
+/// Interfaces for objects that track creation information.
 /// Combines creation time and creator interfaces.
 /// </summary>
 public interface ICreationAuditedObject : IHasCreationTime, IMayHaveCreator
