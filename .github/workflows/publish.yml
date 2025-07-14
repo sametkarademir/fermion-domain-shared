@@ -53,7 +53,7 @@ jobs:
 
       - name: Pack
         run: |
-          dotnet pack src/Fermion.EntityFramework.Shared/Fermion.EntityFramework.Shared.csproj \
+          dotnet pack src/Fermion.Domain.Shared/Fermion.Domain.Shared.csproj \
             --configuration Release \
             --no-build \
             --output nupkgs \
