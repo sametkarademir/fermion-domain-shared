@@ -5,3 +5,4 @@ riderModule.iml
 /_ReSharper.Caches/
 .idea/
 Fermion.Domain.Shared.sln.DotSettings.user
+nupkg
