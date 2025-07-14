@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <PackageId>Fermion.Domain.Shared</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>Samet Karademir</Authors>
         <Description>A comprehensive library that provides common abstractions, base classes, and utilities for domain-driven design in .NET applications.</Description>
         <PackageTags>domain-driven-design;ddd;entity;audit;convention;filter</PackageTags>
@@ -14,7 +14,7 @@
         <PackageProjectUrl>https://github.com/sametkarademir/fermion-domain-shared</PackageProjectUrl>
         <RepositoryUrl>https://github.com/sametkarademir/fermion-domain-shared.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <IncludeSymbols>true</IncludeSymbols>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -22,7 +22,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="readme.md" Pack="true" PackagePath="/" />
+        <None Include="README.md" Pack="true" PackagePath="/" />
     </ItemGroup>
 
     <ItemGroup>

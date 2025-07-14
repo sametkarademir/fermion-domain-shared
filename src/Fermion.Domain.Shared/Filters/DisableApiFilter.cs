@@ -30,7 +30,7 @@ public class DisableApiFilter : Attribute, IResourceFilter
     public void OnResourceExecuting(ResourceExecutingContext context)
     {
         context.HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
-        context.Result = new EmptyResult();
+        context.Result = new NotFoundResult();
     }
 
     public void OnResourceExecuted(ResourceExecutedContext context)
